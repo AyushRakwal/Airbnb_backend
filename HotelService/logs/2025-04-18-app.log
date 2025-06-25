@@ -1,0 +1,7 @@
+{"level":"info","message":"Server is running on http://localhost:3001","timestamp":"04-18-2025 21:54:24","correlationId":"unknown-error-while-creating-correlation-id","data":{}}
+{"level":"info","message":"Press Ctrl+C to stop the server.","timestamp":"04-18-2025 21:54:24","correlationId":"unknown-error-while-creating-correlation-id","data":{}}
+{"level":"info","message":"Server is running on http://localhost:3000","timestamp":"04-18-2025 22:00:13","correlationId":"unknown-error-while-creating-correlation-id","data":{}}
+{"level":"info","message":"Press Ctrl+C to stop the server.","timestamp":"04-18-2025 22:00:13","correlationId":"unknown-error-while-creating-correlation-id","data":{}}
+{"level":"info","message":"Validating request body","timestamp":"04-18-2025 22:00:20","correlationId":"466f3a4e-f256-4d0f-9767-a520380f1f60","data":{}}
+{"level":"info","message":"Request body is valid","timestamp":"04-18-2025 22:00:20","correlationId":"466f3a4e-f256-4d0f-9767-a520380f1f60","data":{}}
+{"level":"info","message":"Ping request received","timestamp":"04-18-2025 22:00:20","correlationId":"466f3a4e-f256-4d0f-9767-a520380f1f60","data":{}}

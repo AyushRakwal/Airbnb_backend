@@ -1,0 +1,8 @@
+{"level":"info","message":"Environment variables loaded from .env file","timestamp":"2025-04-18 14:44:26","correlationId":"error-default-correlation-id","data":{}}
+{"level":"info","message":"Server is running on http://localhost:3000","timestamp":"2025-04-18 14:44:26","correlationId":"error-default-correlation-id","data":{}}
+{"level":"info","message":"Validating request body","timestamp":"2025-04-18 14:44:39","correlationId":"7db94e8b-5245-463e-b04d-2a1cf1d97de9","data":{}}
+{"level":"info","message":"Request body is valid","timestamp":"2025-04-18 14:44:39","correlationId":"7db94e8b-5245-463e-b04d-2a1cf1d97de9","data":{}}
+{"level":"info","message":"Validating request body","timestamp":"2025-04-18 14:45:19","correlationId":"8cbf53ee-1e0b-480a-a5fe-9defbf532051","data":{}}
+{"level":"info","message":"Request body is valid","timestamp":"2025-04-18 14:45:19","correlationId":"8cbf53ee-1e0b-480a-a5fe-9defbf532051","data":{}}
+{"level":"info","message":"Validating request body","timestamp":"2025-04-18 14:45:28","correlationId":"174e64d0-7b50-4ec0-bfb0-d89ddba65f24","data":{}}
+{"level":"info","message":"Request body is valid","timestamp":"2025-04-18 14:45:28","correlationId":"174e64d0-7b50-4ec0-bfb0-d89ddba65f24","data":{}}

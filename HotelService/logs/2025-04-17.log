@@ -1,0 +1,24 @@
+{"level":"info","message":"Environment variables loaded from .env file","timestamp":"2025-04-17 22:05:42","correlationId":"error-default-correlation-id","data":{}}
+{"level":"info","message":"Server is running on http://localhost:3000","timestamp":"2025-04-17 22:05:42","correlationId":"error-default-correlation-id","data":{}}
+{"level":"info","message":"Environment variables loaded from .env file","timestamp":"2025-04-17 22:24:19","correlationId":"error-default-correlation-id","data":{}}
+{"level":"info","message":"Server is running on http://localhost:3000","timestamp":"2025-04-17 22:24:19","correlationId":"error-default-correlation-id","data":{}}
+{"level":"info","message":"Validating request body","timestamp":"2025-04-17 22:24:24","correlationId":"4dbdb677-d0d8-47c6-929f-86d7d9251932","data":{}}
+{"level":"error","message":"Request body is invalid","timestamp":"2025-04-17 22:24:24","correlationId":"4dbdb677-d0d8-47c6-929f-86d7d9251932","data":{}}
+{"level":"info","message":"Environment variables loaded from .env file","timestamp":"2025-04-17 22:25:04","correlationId":"error-default-correlation-id","data":{}}
+{"level":"info","message":"Server is running on http://localhost:3000","timestamp":"2025-04-17 22:25:05","correlationId":"error-default-correlation-id","data":{}}
+{"level":"info","message":"Validating request body","timestamp":"2025-04-17 22:25:09","correlationId":"f2e89e78-fa02-4d3b-b617-5e4ed6aba104","data":{}}
+{"level":"error","message":"Request body is invalid","timestamp":"2025-04-17 22:25:09","correlationId":"f2e89e78-fa02-4d3b-b617-5e4ed6aba104","data":{}}
+{"level":"info","message":"Validating request body","timestamp":"2025-04-17 22:25:14","correlationId":"57a35901-de93-4fe0-9acd-197bed95be67","data":{}}
+{"level":"error","message":"Request body is invalid","timestamp":"2025-04-17 22:25:14","correlationId":"57a35901-de93-4fe0-9acd-197bed95be67","data":{}}
+{"level":"info","message":"Validating request body","timestamp":"2025-04-17 22:25:44","correlationId":"1d4ed487-fbf7-4bc1-a64e-3c2872369725","data":{}}
+{"level":"info","message":"Request body is valid","timestamp":"2025-04-17 22:25:44","correlationId":"1d4ed487-fbf7-4bc1-a64e-3c2872369725","data":{}}
+{"level":"info","message":"Validating request body","timestamp":"2025-04-17 22:26:25","correlationId":"720c8928-3611-430c-b282-d483433abe63","data":{}}
+{"level":"error","message":"Request body is invalid","timestamp":"2025-04-17 22:26:25","correlationId":"720c8928-3611-430c-b282-d483433abe63","data":{}}
+{"level":"info","message":"Validating request body","timestamp":"2025-04-17 22:28:01","correlationId":"ba130ad4-eb38-4b2f-8191-d93e77b993de","data":{}}
+{"level":"error","message":"Request body is invalid","timestamp":"2025-04-17 22:28:01","correlationId":"ba130ad4-eb38-4b2f-8191-d93e77b993de","data":{}}
+{"level":"info","message":"Validating request body","timestamp":"2025-04-17 22:28:08","correlationId":"2658c8e9-e517-4233-b1a8-a92932c44809","data":{}}
+{"level":"error","message":"Request body is invalid","timestamp":"2025-04-17 22:28:08","correlationId":"2658c8e9-e517-4233-b1a8-a92932c44809","data":{}}
+{"level":"info","message":"Environment variables loaded from .env file","timestamp":"2025-04-17 22:28:26","correlationId":"error-default-correlation-id","data":{}}
+{"level":"info","message":"Server is running on http://localhost:3000","timestamp":"2025-04-17 22:28:26","correlationId":"error-default-correlation-id","data":{}}
+{"level":"info","message":"Validating request body","timestamp":"2025-04-17 22:28:41","correlationId":"9d7eadb8-c1e2-4cfd-af67-e3ffb5df19fa","data":{}}
+{"level":"info","message":"Request body is valid","timestamp":"2025-04-17 22:28:41","correlationId":"9d7eadb8-c1e2-4cfd-af67-e3ffb5df19fa","data":{}}
