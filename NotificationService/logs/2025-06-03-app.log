@@ -1,0 +1,11 @@
+{"level":"info","message":"Server is running on http://localhost:3002","timestamp":"06-03-2025 15:22:47","correlationId":"unknown-error-while-creating-correlation-id","data":{}}
+{"level":"info","message":"Press Ctrl+C to stop the server.","timestamp":"06-03-2025 15:22:47","correlationId":"unknown-error-while-creating-correlation-id","data":{}}
+{"level":"info","message":"Mailer worker setup completed.","timestamp":"06-03-2025 15:22:47","correlationId":"unknown-error-while-creating-correlation-id","data":{}}
+{"level":"info","message":"Server is running on http://localhost:3002","timestamp":"06-03-2025 15:27:32","correlationId":"unknown-error-while-creating-correlation-id","data":{}}
+{"level":"info","message":"Press Ctrl+C to stop the server.","timestamp":"06-03-2025 15:27:32","correlationId":"unknown-error-while-creating-correlation-id","data":{}}
+{"level":"info","message":"Mailer worker setup completed.","timestamp":"06-03-2025 15:27:32","correlationId":"unknown-error-while-creating-correlation-id","data":{}}
+{"level":"info","message":"Server is running on http://localhost:3002","timestamp":"06-03-2025 15:28:15","correlationId":"unknown-error-while-creating-correlation-id","data":{}}
+{"level":"info","message":"Press Ctrl+C to stop the server.","timestamp":"06-03-2025 15:28:15","correlationId":"unknown-error-while-creating-correlation-id","data":{}}
+{"level":"info","message":"Mailer worker setup completed.","timestamp":"06-03-2025 15:28:15","correlationId":"unknown-error-while-creating-correlation-id","data":{}}
+{"level":"info","message":"Email sent to fearlessentrance45@gmail.com with subject: Test Email","timestamp":"06-03-2025 15:28:19","correlationId":"unknown-error-while-creating-correlation-id","data":{}}
+{"level":"info","message":"Email sent to fearlessentrance45@gmail.com with subject: Test Email","timestamp":"06-03-2025 15:28:19","correlationId":"unknown-error-while-creating-correlation-id","data":{}}
