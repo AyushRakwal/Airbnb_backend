@@ -4,6 +4,7 @@ import { HotelRepository } from "../repositories/hotel.repository";
 
 const hotelRepository = new HotelRepository();
 
+
 export async function createHotelService(hotelData: createHotelDTO) {
     const hotel = await hotelRepository.create(hotelData);
     return hotel;
@@ -20,6 +21,6 @@ export async function getAllHotelsService() {
 }
 
 export async function deleteHotelService(id: number) {
-    const hotel = await hotelRepository.softDelete(id);
-    return hotel;
+    const response = await hotelRepository.softDelete(id);
+    return response;
 }
