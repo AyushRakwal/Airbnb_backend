@@ -1,14 +1,14 @@
-import { CreationAttributes, Model, ModelStatic, WhereOptions } from "sequelize";
+import { Model, CreationAttributes, ModelStatic, WhereOptions } from 'sequelize';
 
+abstract class BaseRepository<T extends Model> {
 
-abstract class BaseRepositoy<T extends Model> {
     protected model: ModelStatic<T>;
 
     constructor(model: ModelStatic<T>) {
         this.model = model;
     }
 
-    async findBy(id : number) : Promise< T | null> {
+    async findById(id: number) : Promise<T | null> {
         const record = await this.model.findByPk(id);
         if (!record) {
             return null;
@@ -16,7 +16,7 @@ abstract class BaseRepositoy<T extends Model> {
         return record;
     }
 
-    async findAll() : Promise<T[]> {
+    async findAll(): Promise<T[]> {
         const records = await this.model.findAll({});
         if (!records) {
             return [];
@@ -24,9 +24,9 @@ abstract class BaseRepositoy<T extends Model> {
         return records;
     }
 
-    async delete (whereOptions : WhereOptions<T>) : Promise<void> {
+    async delete(whereOptions: WhereOptions<T>): Promise<void> {
         const record = await this.model.destroy({
-            where : {
+            where: {
                 ...whereOptions
             }
         });
@@ -36,25 +36,23 @@ abstract class BaseRepositoy<T extends Model> {
         }
 
         return;
-    } 
+    }
 
-    async create(data : CreationAttributes<T>) : Promise<T> {
+    async create(data: CreationAttributes<T>): Promise<T> {
         const record = await this.model.create(data);
-        if (!record) {
-            throw new Error("Error creating record");
-        }
         return record;
     }
 
-    async update(id : number , data : Partial<T>) : Promise<T | null> {
+    async update(id: number, data: Partial<T>): Promise<T | null> {
         const record = await this.model.findByPk(id);
-        if(!record) {
-            throw new Error(`Record not found for update with id: ${id}`);
+        if (!record) {
+            throw new Error(`Record with id ${id} not found`);
         }
         Object.assign(record, data);
         await record.save();
         return record;
     }
+
 }
 
-export default BaseRepositoy;
+export default BaseRepository;

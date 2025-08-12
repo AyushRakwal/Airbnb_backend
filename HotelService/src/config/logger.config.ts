@@ -4,8 +4,9 @@ import DailyRotateFile from "winston-daily-rotate-file";
 
 const logger = winston.createLogger({
     format: winston.format.combine(
-        winston.format.timestamp({ format: "MM-DD-YYYY HH:mm:ss"  }),
-        winston.format.json(), 
+        winston.format.timestamp({ format: "MM-DD-YYYY HH:mm:ss"  }), // how the timestamp should be formatted
+        winston.format.json(), // Format the log message as JSON
+        // define a cutom print
         winston.format.printf( ({  level, message, timestamp, ...data }) => {
             const output = { 
                 level,
@@ -15,15 +16,15 @@ const logger = winston.createLogger({
                 data 
             };
             return JSON.stringify(output);
-        })
+        }),
     ),
     transports: [
         new winston.transports.Console(),
         new DailyRotateFile({
-            filename: "logs/%DATE%-app.log", 
-            datePattern: "YYYY-MM-DD",
-            maxSize: "20m", 
-            maxFiles: "14d", 
+            filename: "logs/%DATE%-app.log", // The file name pattern
+            datePattern: "YYYY-MM-DD", // The date format
+            maxSize: "20m", // The maximum size of the log file
+            maxFiles: "14d", // The maximum number of log files to keep
         })
     ]
 });

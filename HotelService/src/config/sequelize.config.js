@@ -1,3 +1,3 @@
-require('ts-node/register');
-const config = require('./db.config.js');
+require('ts-node/register'); // This line enables TypeScript support
+const config = require('./db.config');
 module.exports = config;

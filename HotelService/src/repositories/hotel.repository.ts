@@ -1,22 +1,21 @@
 import logger from "../config/logger.config";
 import Hotel from "../db/models/hotel";
 import { NotFoundError } from "../utils/errors/app.error";
-import BaseRepositoy from "./base.repository";
+import BaseRepository from "./base.repository";
 
-
-export class HotelRepository extends BaseRepositoy<Hotel>{
-    constructor(){
+export class HotelRepository extends BaseRepository<Hotel> {
+    constructor() {
         super(Hotel);
     }
 
-    async findAll(){
+    async findAll() {
         const hotels = await this.model.findAll({
             where: {
                 deletedAt: null
             }
         });
 
-        if(!hotels || hotels.length === 0) {
+        if (!hotels) {
             logger.error(`No hotels found`);
             throw new NotFoundError(`No hotels found`);
         }
@@ -25,31 +24,18 @@ export class HotelRepository extends BaseRepositoy<Hotel>{
         return hotels;
     }
 
-    async findById(id: number) {
-        const hotel = await this.model.findByPk(id);
+    async softDelete(id: number) {
+        const hotel = await Hotel.findByPk(id);
 
-        if(!hotel || hotel.deletedAt) {
-            logger.error(`Hotel with id ${id} not found`);
+        if(!hotel) {
+            logger.error(`Hotel not found: ${id}`);
             throw new NotFoundError(`Hotel with id ${id} not found`);
         }
 
-        logger.info(`Hotel found: ${hotel.id}`);
-        return hotel;
-    }
-    
-    async softDelete(id: number) {
-        const hotel = await this.model.findByPk(id);
-
-        if(!hotel) {
-            logger.error(`Hotel with id ${id} not found for deletion`);
-            throw new NotFoundError(`Hotel with id ${id} not found for deletion`);
-        }
-
         hotel.deletedAt = new Date();
-        await hotel.save();
-        logger.info(`Hotel with id ${id} soft deleted successfully`);
+        await hotel.save(); // Save the changes to the database
+        logger.info(`Hotel soft deleted: ${hotel.id}`);
         return true;
     }
 
 }
-
