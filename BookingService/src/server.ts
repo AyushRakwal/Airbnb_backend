@@ -10,18 +10,9 @@ const app = express();
 
 app.use(express.json());
 
-/**
- * Registering all the routers and their corresponding routes with out app server object.
- */
-
 app.use(attachCorrelationIdMiddleware);
 app.use('/api/v1', v1Router);
 app.use('/api/v2', v2Router); 
-
-
-/**
- * Add the error handler middleware
- */
 
 app.use(appErrorHandler);
 app.use(genericErrorHandler);
@@ -33,13 +24,12 @@ app.listen(serverConfig.PORT, () => {
 
     for(let i = 0; i < 1; i++) {
         addEmailToQueue({
-            to:`sample from booking${i}`,
-            subject: `Booking Confirmation ${i}`,
-            templateId: 'booking-confirmation-id',
-            params:{
-                name : `User ${i}`,
-                bookingId: `booking-${i}`,
-                orderId : `12345`,
+            to: `sample from booking ${i}`,
+            subject: "Sample Email booking",
+            templateId: "sample-template",
+            params: {
+                name: "John Doe",
+                orderId: "12345",
             }
         })
     }

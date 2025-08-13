@@ -6,6 +6,7 @@ import { generateIdempotencyKey } from '../utils/generateIdempotencyKey';
 import prismaClient from '../prisma/client';
 import { redlock } from '../config/redis.config';
 import { serverConfig } from '../config';
+
 export async function createBookingService(createBookingDTO: CreateBookingDTO) {
 
     const ttl = serverConfig.LOCK_TTL;
@@ -16,7 +17,7 @@ export async function createBookingService(createBookingDTO: CreateBookingDTO) {
         const booking = await createBooking({
             userId: createBookingDTO.userId,
             hotelId: createBookingDTO.hotelId,
-            totalGuest: createBookingDTO.totalGuest,
+            totalGuests: createBookingDTO.totalGuests,
             bookingAmount: createBookingDTO.bookingAmount,
         });
 
@@ -51,5 +52,6 @@ export async function confirmBookingService(idempotencyKey: string) {
         await finalizeIdempotencyKey(tx, idempotencyKey);
 
         return booking;
-    });
+
+    }); 
 }
