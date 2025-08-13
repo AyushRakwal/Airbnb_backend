@@ -1,6 +1,6 @@
 export type CreateBookingDTO = {
-    userId : number;
-    hotelId : number;
-    totalGuest : number;
-    bookingAmount : number;
+    userId: number;
+    hotelId: number;
+    totalGuests: number;
+    bookingAmount: number;
 }

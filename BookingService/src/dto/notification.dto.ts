@@ -1,7 +1,6 @@
-export interface NotificationDTO {
-    to : string; // The recipient's email address
-    subject : string; // The subject of the notification
-    templateId : string; // The ID of the email template to use
-    params : Record<string, any>; // Parameters to be passed to the email template
+export interface NotificationDto {
+    to: string; // Email address of the recipient
+    subject: string; // Subject of the email
+    templateId: string; // ID of the email template to use
+    params: Record<string, any>; // Parameters to replace in the template
 }
-
