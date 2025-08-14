@@ -1,25 +1,30 @@
-import Redis from "ioredis";
-import { serverConfig } from ".";
+import Redis from 'ioredis';
+import { serverConfig } from '.';
 
-function connectToRedis() { // Singleton pattern to ensure a single Redis connection
+// Singleton pattern to connect to Redis
+function connectToRedis() {
     try {
-        let connection : Redis;
+
+        let connection: Redis;
+
         const redisConfig = {
-            port : serverConfig.REDIS_PORT,
-            host : serverConfig.REDIS_HOST,
-            maxRetriesPerRequest: null, // Disable automatic retries
+            port: serverConfig.REDIS_PORT,
+            host: serverConfig.REDIS_HOST,
+            maxRetriesPerRequest: null, // Disable automatic reconnection
         }
-        
+
         return () => {
-            if(!connection){
+            if (!connection) {
                 connection = new Redis(redisConfig);
                 return connection;
             }
+
             return connection;
         }
+        
 
     } catch (error) {
-        console.error("Error connecting to Redis:", error);
+        console.error('Error connecting to Redis:', error);
         throw error;
     }
 }

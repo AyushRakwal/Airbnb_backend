@@ -3,16 +3,16 @@ import logger from "../config/logger.config";
 import transporter from "../config/mailer.config";
 import { InternalServerError } from "../utils/errors/app.error";
 
-export async function sendEmail(to: string , subject : string , body : string){
+export async function sendEmail(to: string, subject: string, body: string) {
     try {
         await transporter.sendMail({
             from: serverConfig.MAIL_USER,
             to,
             subject,
-            html: body,
+            html: body
         });
-        logger.info(`Email sent to ${to} with subject: ${subject}`);
+        logger.info(`Email sent to ${to} with subject "${subject}"`);
     } catch (error) {
-        throw new InternalServerError("Failed to send email");
+        throw new InternalServerError(`Failed to send email`);
     }
 }
